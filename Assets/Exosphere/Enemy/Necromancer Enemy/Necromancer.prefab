@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: -7022173064201401753}
   - component: {fileID: 6182094545319626727}
   - component: {fileID: 8512269046885811708}
+  - component: {fileID: 6059658654969549195}
   m_Layer: 13
   m_Name: Necromancer
   m_TagString: Untagged
@@ -43,6 +44,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8947665191417191656}
+  - {fileID: 4646996736605809140}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -336,7 +338,7 @@ MonoBehaviour:
   MaximumHealth: 100
   Invulnerable: 0
   ImmuneToDamage: 0
-  DamageFeedbacks: {fileID: 0}
+  DamageFeedbacks: {fileID: 7303211350644653364}
   FeedbackIsProportionalToDamage: 0
   FlickerSpriteOnHit: 1
   FlickerColor: {r: 1, g: 0.078431375, b: 0.078431375, a: 1}
@@ -518,11 +520,99 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2722c8e06c7fe46bbbd264ab655e2c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShootDistance: 25
-  RaycastOriginOffset: {x: 1, y: 1}
+  ShootDistance: 17
+  RaycastOriginOffset: {x: 0, y: 1.15}
   TargetLayerMask:
     serializedVersion: 2
     m_Bits: 512
+--- !u!114 &6059658654969549195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275148858543175968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c80847f84ae6ba45af399df14d43c05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LootMode: 1
+  GameObjectToLoot: {fileID: 0}
+  LootTable:
+    ObjectsToLoot:
+    - Loot: {fileID: 1358936900131897716, guid: 4ed3126f8c811aa4c858338bb2e7bdfb,
+        type: 3}
+      Weight: 4
+      ChancePercentage: 0
+    - Loot: {fileID: 6770583541051647576, guid: b2868d7a81db37444a35419a899266ee,
+        type: 3}
+      Weight: 1
+      ChancePercentage: 0
+    WeightsTotal: 0
+  LootTableSO: {fileID: 0}
+  SpawnLootOnDeath: 1
+  SpawnLootOnDamage: 0
+  PoolLoot: 0
+  PoolSize: 20
+  MutualizedPoolName: 
+  Delay: 0
+  Quantity: {x: 1, y: 1}
+  SpawnProperties:
+    Shape: 0
+    NormalToSpawnPlane: {x: 0, y: 4, z: 0}
+    MinimumSphereRadius: 1
+    MaximumSphereRadius: 2
+    MinimumCubeBaseSize: {x: 1, y: 1, z: 1}
+    MaximumCubeBaseSize: {x: 2, y: 2, z: 2}
+    MinimumNormalAxisOffset: 0
+    MaximumNormalAxisOffset: 0
+    UseNormalAxisOffsetCurve: 0
+    NormalOffsetCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    NormalOffsetCurveRemapZero: 0
+    NormalOffsetCurveRemapOne: 1
+    InvertNormalOffsetCurve: 0
+    MinimumRotation: {x: 0, y: 0, z: 0}
+    MaximumRotation: {x: 0, y: 0, z: 0}
+    MinimumScale: {x: 1, y: 1, z: 1}
+    MaximumScale: {x: 1, y: 1, z: 1}
+  MaximumQuantity: 100
+  RemainingQuantity: 100
+  AvoidObstacles: 1
+  AvoidObstaclesLayerMask:
+    serializedVersion: 2
+    m_Bits: 264448
+  AvoidRadius: 1
+  MaxAvoidAttempts: 5
+  LootFeedback: {fileID: 0}
+  DrawGizmos: 0
+  GizmosQuantity: 1000
+  GizmosColor: {r: 0.827451, g: 0.827451, b: 0.827451, a: 1}
+  GimosSize: 1
+  SpawnLootButton: 0
 --- !u!1 &6169600498781584563
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,3 +674,176 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a247047324a97448edf6a043ac4e29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6188409158554772138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4646996736605809140}
+  - component: {fileID: 7303211350644653364}
+  - component: {fileID: 2956540312118585122}
+  - component: {fileID: 8060852190308407625}
+  m_Layer: 0
+  m_Name: DamageFeedbacks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4646996736605809140
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6188409158554772138}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0.6666667}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2364679399696692599}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7303211350644653364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6188409158554772138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841b72de2996c5c40bfb394f3d0e0a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Feedbacks:
+  - {fileID: 2956540312118585122}
+  - {fileID: 8060852190308407625}
+  InitializationMode: 2
+  SafeMode: 3
+  Direction: 0
+  AutoChangeDirectionOnEnd: 0
+  AutoPlayOnStart: 0
+  AutoPlayOnEnable: 0
+  ForceTimescaleMode: 0
+  ForcedTimescaleMode: 1
+  DurationMultiplier: 1
+  RandomizeDuration: 0
+  RandomDurationMultiplier: {x: 0.5, y: 1.5}
+  DisplayFullDurationDetails: 0
+  PlayerTimescaleMode: 1
+  CooldownDuration: 0
+  InitialDelay: 0
+  CanPlay: 1
+  CanPlayWhileAlreadyPlaying: 1
+  ChanceToPlay: 100
+  FeedbacksIntensity: 1
+  Events:
+    TriggerMMFeedbacksEvents: 0
+    TriggerUnityEvents: 1
+    OnPlay:
+      m_PersistentCalls:
+        m_Calls: []
+    OnPause:
+      m_PersistentCalls:
+        m_Calls: []
+    OnResume:
+      m_PersistentCalls:
+        m_Calls: []
+    OnRevert:
+      m_PersistentCalls:
+        m_Calls: []
+    OnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+  DebugActive: 0
+--- !u!114 &2956540312118585122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6188409158554772138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdfe4b9b079619143a9748eeee75e698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Particles Instantiation
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    ExcludeFromHoldingPauses: 0
+    ContributeToTotalDuration: 1
+    InitialDelay: 0
+    CooldownDuration: 0
+    InterruptsOnStop: 1
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  Mode: 1
+  CachedRecycle: 1
+  ParticlesPrefab: {fileID: 19800000, guid: 65c210b4af5c9d544814a1bb717df020, type: 3}
+  RandomParticlePrefabs: []
+  ForceSetActiveOnPlay: 0
+  PositionMode: 0
+  InstantiateParticlesPosition: {fileID: 0}
+  TargetWorldPosition: {x: 0, y: 0, z: 0}
+  Offset: {x: 0, y: 0, z: 0}
+  NestParticles: 0
+  ApplyRotation: 0
+  ApplyScale: 0
+--- !u!114 &8060852190308407625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6188409158554772138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1503d540d467c874eb716ca9a18b8bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Corgi Engine Sound
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    ExcludeFromHoldingPauses: 0
+    ContributeToTotalDuration: 1
+    InitialDelay: 0
+    CooldownDuration: 0
+    InterruptsOnStop: 1
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  SoundFX: {fileID: 8300000, guid: 5dccbcd7b1e80a042a72fdb8a204302a, type: 3}
+  Loop: 0

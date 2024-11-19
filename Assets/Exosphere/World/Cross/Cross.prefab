@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5465957218136082405}
   m_Layer: 0
   m_Name: Cross
-  m_TagString: Untagged
+  m_TagString: Cross
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,6 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd368d0163bf949cdba73858da50af99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 0
+  cross: {fileID: 0}
   PickFeedbacks: {fileID: 7276042906623113704}
   DisableObjectOnPick: 1
   DisableRendererOnPick: 0
@@ -154,6 +156,7 @@ MonoBehaviour:
   TargetObjectToDisable: {fileID: 0}
   TargetObjectDisableDelay: 1
   HealthToGive: 25
+  PointsToTake: 10
 --- !u!1 &6443729590703537314
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +328,7 @@ MonoBehaviour:
     Quantized: 0
     TargetBPM: 120
   DebugActive: 0
-  Sfx: {fileID: 8300000, guid: de0de99cd7ac84fa0978dd5176617fbb, type: 3}
+  Sfx: {fileID: 8300000, guid: cd62ef75dec3d0a40914b6c5beb25db2, type: 3}
   RandomSfx: []
   TestButton: 0
   TestStopButton: 0

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4274425273489519194
+--- !u!1 &609372080075041697
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,95 +8,463 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7404905265464979388}
-  - component: {fileID: 1362431960911658243}
-  - component: {fileID: 2228922112380038388}
+  - component: {fileID: 5220002135766712438}
+  - component: {fileID: 704685307918326739}
+  - component: {fileID: 4933936506846739189}
   m_Layer: 9
-  m_Name: DashDamageOnTouch
+  m_Name: DashFeedback
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &7404905265464979388
+  m_IsActive: 1
+--- !u!4 &5220002135766712438
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4274425273489519194}
+  m_GameObject: {fileID: 609372080075041697}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.156, y: 0.808, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6498953287182686561}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &704685307918326739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609372080075041697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841b72de2996c5c40bfb394f3d0e0a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Feedbacks:
+  - {fileID: 4933936506846739189}
+  InitializationMode: 2
+  SafeMode: 3
+  Direction: 0
+  AutoChangeDirectionOnEnd: 0
+  AutoPlayOnStart: 0
+  AutoPlayOnEnable: 0
+  ForceTimescaleMode: 0
+  ForcedTimescaleMode: 1
+  DurationMultiplier: 1
+  RandomizeDuration: 0
+  RandomDurationMultiplier: {x: 0.5, y: 1.5}
+  DisplayFullDurationDetails: 0
+  PlayerTimescaleMode: 1
+  CooldownDuration: 0
+  InitialDelay: 0
+  CanPlay: 1
+  CanPlayWhileAlreadyPlaying: 1
+  ChanceToPlay: 100
+  FeedbacksIntensity: 1
+  Events:
+    TriggerMMFeedbacksEvents: 0
+    TriggerUnityEvents: 1
+    OnPlay:
+      m_PersistentCalls:
+        m_Calls: []
+    OnPause:
+      m_PersistentCalls:
+        m_Calls: []
+    OnResume:
+      m_PersistentCalls:
+        m_Calls: []
+    OnRevert:
+      m_PersistentCalls:
+        m_Calls: []
+    OnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+  DebugActive: 0
+--- !u!114 &4933936506846739189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609372080075041697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2ce51367856bd49b72678cc4263225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Sound
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    ExcludeFromHoldingPauses: 0
+    ContributeToTotalDuration: 1
+    InitialDelay: 0
+    CooldownDuration: 0
+    InterruptsOnStop: 1
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  Sfx: {fileID: 8300000, guid: e2e1a94c57b4b394eae852ef0c5a80f4, type: 3}
+  RandomSfx: []
+  TestButton: 0
+  TestStopButton: 0
+  PlayMethod: 0
+  PoolSize: 10
+  MinVolume: 1
+  MaxVolume: 1
+  MinPitch: 1
+  MaxPitch: 1
+  SfxAudioMixerGroup: {fileID: 0}
+  Priority: 128
+--- !u!1 &1455731634567925442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7358393670079804742}
+  - component: {fileID: 8993351755264971456}
+  - component: {fileID: 6637815385307722732}
+  - component: {fileID: 1678124609616054027}
+  m_Layer: 0
+  m_Name: JumpFeedbacks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7358393670079804742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455731634567925442}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6498953287182686561}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8993351755264971456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455731634567925442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841b72de2996c5c40bfb394f3d0e0a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Feedbacks:
+  - {fileID: 6637815385307722732}
+  - {fileID: 1678124609616054027}
+  InitializationMode: 2
+  SafeMode: 3
+  Direction: 0
+  AutoChangeDirectionOnEnd: 0
+  AutoPlayOnStart: 0
+  AutoPlayOnEnable: 0
+  ForceTimescaleMode: 0
+  ForcedTimescaleMode: 1
+  DurationMultiplier: 1
+  RandomizeDuration: 0
+  RandomDurationMultiplier: {x: 0.5, y: 1.5}
+  DisplayFullDurationDetails: 0
+  PlayerTimescaleMode: 1
+  CooldownDuration: 0
+  InitialDelay: 0
+  CanPlay: 1
+  CanPlayWhileAlreadyPlaying: 1
+  ChanceToPlay: 100
+  FeedbacksIntensity: 1
+  Events:
+    TriggerMMFeedbacksEvents: 0
+    TriggerUnityEvents: 1
+    OnPlay:
+      m_PersistentCalls:
+        m_Calls: []
+    OnPause:
+      m_PersistentCalls:
+        m_Calls: []
+    OnResume:
+      m_PersistentCalls:
+        m_Calls: []
+    OnRevert:
+      m_PersistentCalls:
+        m_Calls: []
+    OnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+  DebugActive: 0
+--- !u!114 &6637815385307722732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455731634567925442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c27131831afa28b499cb120fc9059997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Particles Play
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    ExcludeFromHoldingPauses: 0
+    ContributeToTotalDuration: 1
+    InitialDelay: 0
+    CooldownDuration: 0
+    InterruptsOnStop: 1
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  Mode: 0
+  BoundParticleSystem: {fileID: 0}
+  RandomParticleSystems: []
+  MoveToPosition: 0
+  ActivateOnPlay: 0
+--- !u!114 &1678124609616054027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455731634567925442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1503d540d467c874eb716ca9a18b8bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Corgi Engine Sound
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    ExcludeFromHoldingPauses: 0
+    ContributeToTotalDuration: 1
+    InitialDelay: 0
+    CooldownDuration: 0
+    InterruptsOnStop: 1
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  SoundFX: {fileID: 8300000, guid: 7938dec88d433c84faf1979bcc8ca314, type: 3}
+  Loop: 0
+--- !u!1 &5050657348187054962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8420944363018735949}
+  - component: {fileID: 5598628510574953536}
+  - component: {fileID: 3410308189782765732}
+  - component: {fileID: 4459025333668963282}
+  m_Layer: 0
+  m_Name: WalkFeedbacks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8420944363018735949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5050657348187054962}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6498953287182686561}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1362431960911658243
+--- !u!114 &5598628510574953536
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4274425273489519194}
+  m_GameObject: {fileID: 5050657348187054962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76891b3b532f84acaaeed44c357bd00c, type: 3}
+  m_Script: {fileID: 11500000, guid: 841b72de2996c5c40bfb394f3d0e0a98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetLayerMask:
-    serializedVersion: 2
-    m_Bits: 8448
-  MinDamageCaused: 150
-  MaxDamageCaused: 10
-  TypedDamages: []
-  DamageCausedKnockbackType: 1
-  DamageCausedKnockbackDirection: 0
-  DamageCausedKnockbackForce: {x: 10, y: 2}
-  InvincibilityDuration: 0
-  RepeatDamageOverTime: 0
-  AmountOfRepeats: 3
-  DurationBetweenRepeats: 1
-  DamageOverTimeInterruptible: 1
-  RepeatedDamageType: {fileID: 0}
-  DamageTakenEveryTime: 0
-  DamageTakenDamageable: 0
-  DamageTakenNonDamageable: 0
-  DamageTakenKnockbackType: 0
-  DamageTakenKnockbackDirection: 0
-  DamageTakenKnockbackForce: {x: 0, y: 0}
-  DamageTakenInvincibilityDuration: 0.5
-  HitDamageableFeedback: {fileID: 0}
-  HitNonDamageableFeedback: {fileID: 0}
-  FreezeFramesOnHitDuration: 0
-  Owner: {fileID: 0}
---- !u!61 &2228922112380038388
-BoxCollider2D:
+  Feedbacks:
+  - {fileID: 3410308189782765732}
+  - {fileID: 4459025333668963282}
+  InitializationMode: 2
+  SafeMode: 3
+  Direction: 0
+  AutoChangeDirectionOnEnd: 0
+  AutoPlayOnStart: 0
+  AutoPlayOnEnable: 0
+  ForceTimescaleMode: 0
+  ForcedTimescaleMode: 1
+  DurationMultiplier: 1
+  RandomizeDuration: 0
+  RandomDurationMultiplier: {x: 0.5, y: 1.5}
+  DisplayFullDurationDetails: 0
+  PlayerTimescaleMode: 1
+  CooldownDuration: 0
+  InitialDelay: 0
+  CanPlay: 1
+  CanPlayWhileAlreadyPlaying: 1
+  ChanceToPlay: 100
+  FeedbacksIntensity: 1
+  Events:
+    TriggerMMFeedbacksEvents: 0
+    TriggerUnityEvents: 1
+    OnPlay:
+      m_PersistentCalls:
+        m_Calls: []
+    OnPause:
+      m_PersistentCalls:
+        m_Calls: []
+    OnResume:
+      m_PersistentCalls:
+        m_Calls: []
+    OnRevert:
+      m_PersistentCalls:
+        m_Calls: []
+    OnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+  DebugActive: 0
+--- !u!114 &3410308189782765732
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4274425273489519194}
+  m_GameObject: {fileID: 5050657348187054962}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.16759014, y: -0.0679425}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.15, y: 1.4}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c27131831afa28b499cb120fc9059997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Particles Play
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    ExcludeFromHoldingPauses: 0
+    ContributeToTotalDuration: 1
+    InitialDelay: 0
+    CooldownDuration: 0
+    InterruptsOnStop: 1
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  Mode: 0
+  BoundParticleSystem: {fileID: 0}
+  RandomParticleSystems: []
+  MoveToPosition: 0
+  ActivateOnPlay: 0
+--- !u!114 &4459025333668963282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5050657348187054962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1503d540d467c874eb716ca9a18b8bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Corgi Engine Sound
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    ExcludeFromHoldingPauses: 0
+    ContributeToTotalDuration: 1
+    InitialDelay: 0
+    CooldownDuration: 0
+    InterruptsOnStop: 1
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  SoundFX: {fileID: 8300000, guid: 2b23f9475842c7d449b5451eb8314df6, type: 3}
+  Loop: 1
 --- !u!1 &6660745500389498635
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +476,7 @@ GameObject:
   - component: {fileID: 8688030323224319409}
   - component: {fileID: 2022240430124200826}
   - component: {fileID: 2281678477356506661}
-  - component: {fileID: 7022614640828255801}
+  - component: {fileID: 8241414521435933993}
   m_Layer: 0
   m_Name: DamageFeedbacks
   m_TagString: Untagged
@@ -145,7 +513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Feedbacks:
   - {fileID: 2281678477356506661}
-  - {fileID: 7022614640828255801}
+  - {fileID: 8241414521435933993}
   InitializationMode: 2
   SafeMode: 3
   Direction: 0
@@ -232,7 +600,7 @@ MonoBehaviour:
   NestParticles: 0
   ApplyRotation: 0
   ApplyScale: 0
---- !u!114 &7022614640828255801
+--- !u!114 &8241414521435933993
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,11 +609,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6660745500389498635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c2ce51367856bd49b72678cc4263225, type: 3}
+  m_Script: {fileID: 11500000, guid: 1503d540d467c874eb716ca9a18b8bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Active: 1
-  Label: Sound
+  Label: Corgi Engine Sound
   Chance: 100
   Timing:
     TimescaleMode: 0
@@ -268,18 +636,8 @@ MonoBehaviour:
     Quantized: 0
     TargetBPM: 120
   DebugActive: 0
-  Sfx: {fileID: 8300000, guid: fc6a8ed8f767ee7449dc2f51593060a7, type: 3}
-  RandomSfx: []
-  TestButton: 0
-  TestStopButton: 0
-  PlayMethod: 0
-  PoolSize: 10
-  MinVolume: 1
-  MaxVolume: 1
-  MinPitch: 1
-  MaxPitch: 1
-  SfxAudioMixerGroup: {fileID: 0}
-  Priority: 128
+  SoundFX: {fileID: 8300000, guid: c36835d5a7729fe418fde4ec13123d60, type: 3}
+  Loop: 0
 --- !u!1 &8732596893859353910
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,8 +659,9 @@ GameObject:
   - component: {fileID: 8016416978209868608}
   - component: {fileID: 4115839454661175775}
   - component: {fileID: -2057318438484918176}
-  - component: {fileID: 1468062749286857838}
   - component: {fileID: 8174186781235034714}
+  - component: {fileID: -5026019032179422440}
+  - component: {fileID: -301596575345958661}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -324,7 +683,9 @@ Transform:
   m_Children:
   - {fileID: 6826699955271796619}
   - {fileID: 8688030323224319409}
-  - {fileID: 7404905265464979388}
+  - {fileID: 8420944363018735949}
+  - {fileID: 7358393670079804742}
+  - {fileID: 5220002135766712438}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -618,8 +979,7 @@ MonoBehaviour:
   MaximumHealth: 100
   Invulnerable: 0
   ImmuneToDamage: 0
-  DamageFeedbacks: {fileID: 1275346582527613728, guid: 7e46f741fb0991c4a98627cf7da85051,
-    type: 3}
+  DamageFeedbacks: {fileID: 2022240430124200826}
   FeedbackIsProportionalToDamage: 0
   FlickerSpriteOnHit: 1
   FlickerColor: {r: 1, g: 0.078431375, b: 0.078431375, a: 1}
@@ -652,12 +1012,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e24d0eb5fa7640038713564930581a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 5598628510574953536}
   AbilityStopFeedbacks: {fileID: 0}
   AbilityPermitted: 1
   BlockingMovementStates: 
   BlockingConditionStates: 
-  WalkSpeed: 8
+  WalkSpeed: 12
   MovementSpeedMultiplier: 1
   AbilityMovementSpeedMultiplier: 1
   PushSpeedMultiplier: 1
@@ -684,13 +1044,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c1a8bab4d234998bcbc559bb58fa11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 8993351755264971456}
   AbilityStopFeedbacks: {fileID: 0}
   AbilityPermitted: 1
   BlockingMovementStates: 
   BlockingConditionStates: 
   NumberOfJumps: 3
-  JumpHeight: 3.025
+  JumpHeight: 5
   JumpRestrictions: 2
   ResetCameraOffsetOnJump: 0
   CanJumpDownOneWayPlatforms: 1
@@ -701,8 +1061,8 @@ MonoBehaviour:
   InputBufferDuration: 0
   OneWayPlatformsJumpCollisionOffDuration: 0.3
   MovingPlatformsJumpCollisionOffDuration: 0.05
-  AirJumpFeedbacks: {fileID: 0}
-  DoubleJumpFeedbacks: {fileID: 0}
+  AirJumpFeedbacks: {fileID: 8993351755264971456}
+  DoubleJumpFeedbacks: {fileID: 8993351755264971456}
   NumberOfJumpsLeft: 0
 --- !u!114 &4115839454661175775
 MonoBehaviour:
@@ -711,7 +1071,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8732596893859353910}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fd71e945bfcd4897b3a95607989c7d4, type: 3}
   m_Name: 
@@ -742,7 +1102,7 @@ MonoBehaviour:
   AbilityPermitted: 1
   BlockingMovementStates: 
   BlockingConditionStates: 
-  InitialWeapon: {fileID: 114000010078180980, guid: 853a4007ad757a845be0861431b7eb27,
+  InitialWeapon: {fileID: 3990369770215088233, guid: 853a4007ad757a845be0861431b7eb27,
     type: 3}
   CanPickupWeapons: 0
   WeaponAttachment: {fileID: 0}
@@ -759,21 +1119,6 @@ MonoBehaviour:
   NewInputExtendsBuffer: 0
   MaximumBufferDuration: 0.25
   CurrentWeapon: {fileID: 0}
---- !u!114 &1468062749286857838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8732596893859353910}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6040d901a9b5794aab1dd11f5343651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_speed: 4
-  m_jumpForce: 7.5
-  m_noBlood: 0
 --- !u!114 &8174186781235034714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,6 +1147,71 @@ MonoBehaviour:
   - {r: 0.97647065, g: 0.52156866, b: 0.003921569, a: 1}
   - {r: 1, g: 0.7137255, b: 0.17254902, a: 1}
   - {r: 1, g: 0.9607844, b: 0.2509804, a: 1}
+--- !u!114 &-5026019032179422440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8732596893859353910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2bb48ea7e7fc4c0fa43dce17235f4f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartFeedbacks: {fileID: 704685307918326739}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  DashDistance: 1.5
+  DashForce: 25
+  ResetForcesOnExit: 0
+  ForceExactDistance: 0
+  Aim:
+    AimControl: 2
+    RotationMode: 0
+    MinimumAngle: -180
+    MaximumAngle: 180
+    CurrentAngle: 0
+  MinimumInputThreshold: 0.1
+  FlipCharacterIfNeeded: 1
+  AutoCorrectTrajectory: 1
+  DashDirectionMinThreshold: 0.1
+  DashCooldown: 1
+  LimitedDashes: 0
+  SuccessiveDashAmount: 1
+  SuccessiveDashesLeft: 1
+  SuccessiveDashResetMethod: 0
+  SuccessiveDashResetDuration: 2
+  InvincibleWhileDashing: 0
+--- !u!114 &-301596575345958661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8732596893859353910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59e06702d6be45948936bd909420d61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  MuteSfxTrackSounds: 1
+  MuteUITrackSounds: 0
+  MuteMusicTrackSounds: 0
+  MuteMasterTrackSounds: 0
+  OnPause:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUnpause:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8800761554601379556
 GameObject:
   m_ObjectHideFlags: 0

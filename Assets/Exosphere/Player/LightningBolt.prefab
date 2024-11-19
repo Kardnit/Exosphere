@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013472678096}
-  - component: {fileID: 114513340775954876}
-  - component: {fileID: 114000010078180980}
+  - component: {fileID: 993306013343620843}
+  - component: {fileID: 3990369770215088233}
   - component: {fileID: 114368442086977796}
   m_Layer: 0
   m_Name: LightningBolt
@@ -37,7 +37,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114513340775954876
+--- !u!114 &993306013343620843
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -51,10 +51,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AimControl: 2
   RotationMode: 2
-  WeaponRotationSpeed: 0
+  WeaponRotationSpeed: 1
   InstantFlip: 0
-  MinimumAngle: -90
-  MaximumAngle: 90
+  MinimumAngle: -180
+  MaximumAngle: 180
   IgnoreSlopeRotation: 0
   IgnoreDownWhenGrounded: 0
   Reticle: {fileID: 0}
@@ -63,9 +63,9 @@ MonoBehaviour:
   ReticleZPosition: 0
   ReticleAtMousePosition: 0
   RotateReticle: 0
-  ReplaceMousePointer: 0
+  ReplaceMousePointer: 1
   DisableReticleOnDeath: 1
---- !u!114 &114000010078180980
+--- !u!114 &3990369770215088233
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,14 +74,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010407495960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d7ce0b8cf4b34859b9e359283b2e7f3, type: 3}
+  m_Script: {fileID: 11500000, guid: c3e65a36bb78f47488c16fa86dfc7395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TriggerMode: 1
   DelayBeforeUse: 0
   DelayBeforeUseReleaseInterruption: 1
   TimeBetweenUses: 0.2
-  TimeBetweenUsesReleaseInterruption: 1
+  TimeBetweenUsesReleaseInterruption: 0
   Interruptable: 0
   InitializeOnStart: 0
   MagazineBased: 0
@@ -92,7 +92,7 @@ MonoBehaviour:
   AutoDestroyWhenEmpty: 0
   AutoDestroyWhenEmptyDelay: 1
   CurrentAmmoLoaded: 0
-  WeaponAttachmentOffset: {x: 0, y: -0.2, z: 0}
+  WeaponAttachmentOffset: {x: 0, y: 0, z: 0}
   FlipWeaponOnCharacterFlip: 1
   FlipValue: {x: -1, y: 1, z: 1}
   LeftHandHandle: {fileID: 0}
@@ -112,14 +112,14 @@ MonoBehaviour:
   StartAnimationParameter: 
   DelayBeforeUseAnimationParameter: 
   SingleUseAnimationParameter: 
-  UseAnimationParameter: CorgiMachineGunFiring
+  UseAnimationParameter: 
   DelayBetweenUsesAnimationParameter: 
-  StopAnimationParameter: CorgiMachineGunStop
+  StopAnimationParameter: 
   ReloadStartAnimationParameter: 
   ReloadAnimationParameter: 
   ReloadStopAnimationParameter: 
-  WeaponAngleAnimationParameter: CorgiMachineGunAngle
-  WeaponAngleRelativeAnimationParameter: CorgiMachineGunAngleRelative
+  WeaponAngleAnimationParameter: 
+  WeaponAngleRelativeAnimationParameter: 
   WeaponStartMMFeedback: {fileID: 7630047942659204653}
   WeaponUsedMMFeedback: {fileID: 3937561594433630770}
   WeaponStopMMFeedback: {fileID: 6281726353068549894}
@@ -165,6 +165,7 @@ MonoBehaviour:
     RecoilStyle: 2
     Delay: 0
     RecoilFeedback: {fileID: 0}
+  ManaToTake: 1
   ProjectileSpawnTransform: {fileID: 0}
   ProjectileSpawnOffset: {x: 0, y: 1.5, z: 0}
   ProjectilesPerShot: 1
@@ -541,7 +542,7 @@ MonoBehaviour:
     Quantized: 0
     TargetBPM: 120
   DebugActive: 0
-  Sfx: {fileID: 8300000, guid: 2d6f1b59f05ba40e3a702c2695cb86fd, type: 3}
+  Sfx: {fileID: 8300000, guid: ed5468053fe77d54d920b15a6517db90, type: 3}
   RandomSfx: []
   TestButton: 0
   TestStopButton: 0
@@ -551,7 +552,8 @@ MonoBehaviour:
   MaxVolume: 1
   MinPitch: 1
   MaxPitch: 1
-  SfxAudioMixerGroup: {fileID: 0}
+  SfxAudioMixerGroup: {fileID: 1299280433609883893, guid: 7e984f512e89b60468e829489e8883e3,
+    type: 2}
   Priority: 128
 --- !u!114 &885103579911021919
 MonoBehaviour:
